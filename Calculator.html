@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    
+    <style>
+
+        body{
+
+background-color:lightgrey;
+
+        }
+         table {
+            width: 400px;
+             height: 900px;
+             background-color: black;
+             border: 2px gray solid; 
+             margin: auto; 
+           margin-top: 30%;
+           margin-bottom: 30%;
+            box-shadow: 0px 0px 10px 12px gray ;
+             padding: 5px;}
+        .button {
+            background-color: black;
+            width: 70px;
+            text-align: center;
+            padding: 5px 10px;
+            cursor: pointer; 
+            font-weight: bolder;
+            font-size: 22px;
+            margin-right: 10px;
+            border: none;
+            color: white;
+            transition: ease all 0.3s;
+        }
+        
+        .bbutton {
+            background-color: black;
+            width: 70px;
+            text-align: center;
+            padding: 5px 10px;
+            cursor: pointer; 
+            font-weight: bolder;
+            font-size: 22px;
+            margin-right: 10px;
+            border: none;
+            color:rgb(197, 70, 11);
+            transition: ease all 0.3s;
+        }
+
+        button:hover {
+            background-color: gray;
+            color: yellow;
+            box-shadow: 5px 5px 10px gray;
+        }
+
+        #screen {
+               width: 300px;
+height: 100px;
+margin-left: 28px;
+margin-top: 110px;
+background-color: black;
+border: 0px;
+color: white;
+font-size: 40px;
+text-align: end;
+
+
+
+        }
+
+      
+    </style>
+</head>
+<body>
+
+    <form name="frm">
+        <table>
+            <tr>
+                <td><input type="text"  id="screen" placeholder="0" readonly autofocus></td>
+            </tr>
+            <tr>
+                <th colspan="4">
+                    <input type="button" class="bbutton" value="AC" onclick="AC();">
+                    <input type="button" class="bbutton" value="⌫" onclick="bksp();">
+                    <input type="button" class="bbutton" value="%" onclick="doCal('%');">
+                    <input type="button" class="bbutton" value="÷" onclick="doCal('/');">
+                </th>
+            </tr>
+
+            <tr>
+                <th colspan="4">
+                    <input type="button" class="button" value="7" onclick="doCal(7);">
+                    <input type="button" class="button" value="8" onclick="doCal(8);">
+                    <input type="button" class="button" value="9" onclick="doCal(9);">
+                    <input type="button" class="bbutton" value="×" onclick="doCal('*');">
+                </th>
+            </tr>
+
+            <tr>
+                <th colspan="4">
+                    <input type="button" class="button" value="4" onclick="doCal(4);">
+                    <input type="button" class="button" value="5" onclick="doCal(5);">
+                    <input type="button" class="button" value="6" onclick="doCal(6);">
+                    <input type="button" class="bbutton" value="-" onclick="doCal('-');">
+                </th>
+            </tr>
+
+            <tr>
+                <th colspan="4">
+                    <input type="button" class="button" value="1" onclick="doCal(1);">
+                    <input type="button" class="button" value="2" onclick="doCal(2);">
+                    <input type="button" class="button" value="3" onclick="doCal(3);">
+                    <input type="button" class="bbutton" value="+" onclick="doCal('+');">
+                </th>
+            </tr>
+
+            <tr>
+                <th colspan="4">
+                    <input type="button" class="bbutton" value="^" onclick="doCal('^');">
+                    <input type="button" class="button" value="0" onclick="doCal(0);">
+                    <input type="button" class="button" value="." onclick="doCal('.');">
+                    <input type="button" class="bbutton" value="=" onclick="dores();">
+                </th>
+            </tr>
+        </table>
+    </form> 
+
+</body>
+
+<script>
+
+  function  doCal(vl) {
+        let scrRef=document.getElementById("screen");
+
+    scrRef.value=scrRef.value+vl;
+
+
+    }
+  
+function dores()
+{
+    let scrRef=document.getElementById("screen");
+    try{
+    
+    let res=eval(scrRef.value);
+    scrRef.value=res;
+    }
+    catch(err)
+    {
+        alert(err);
+    }
+
+}
+function AC()
+{
+    let scrRef=document.getElementById("screen");
+    scrRef.value="";
+}
+function bksp()
+{
+    let scrRef=document.getElementById("screen");
+    let len=scrRef.value.length;
+
+    let sub=scrRef.value.substr(0,len-1);
+    
+
+    scrRef.value=sub;
+
+}
+
+
+</script>
+</html>
