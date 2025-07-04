@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hiten's Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #ffffff;
+      color: #333;
+    }
+    header {
+      background-color: #f5f5ff;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 1rem;
+    }
+    .typed-text {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #7b2cbf;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+    nav a {
+      text-decoration: none;
+      color: #7b2cbf;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #5a189a;
+    }
+    section {
+      padding: 4rem 1rem;
+    }
+   
+     .profile-photo {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background-color: #444;
+      background-image: url('/dp-removebg-preview.png'); /* Replace with actual photo */
+      background-size: cover;
+      background-position: center;
+    }
+    .buttons {
+      margin-top: 1.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .buttons a {
+      text-decoration: none;
+      background: #7b2cbf;
+      color: #fff;
+      padding: 0.7rem 1.4rem;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+    .buttons a:hover {
+      background: #5a189a;
+    }
+
+    .about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.about-text {
+  flex: 1 1 300px;
+  max-width: 600px;
+}
+
+h2 {
+
+    color: #7b2cbf;
+}
+
+    .project-card {
+      background: #f3f0ff;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .project-card img {
+      width: 100%;
+      height: auto;
+    }
+    .project-card .content {
+      padding: 1rem;
+    }
+    footer {
+      background: #7b2cbf;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+      .buttons {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1><span class="typed-text"></span></h1>
+      <br><br>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#languages">Languages</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" data-aos="fade-up">
+  <div class="container">
+    <h2 style="text-align:center;">About Me</h2>
+    <div class="about-content">
+      <div class="profile-photo"></div>
+      <div class="about-text">
+        <p>I enjoy building practical solutions through code and have a growing passion to become a software developer. I’m actively looking for opportunities to contribute, learn from real-world experiences, and connect with like-minded individuals in the tech community.</p>
+        <div class="buttons">
+          <a href= "https://www.linkedin.com/in/hiten-singla-315a7a321/" target="_blank">LinkedIn</a>
+          <a href="https://github.com/HitenSingla-git" target="_blank">GitHub</a>
+          <a href="/Hiten_Resume.pdf" target="_blank">Resume</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section id="education" data-aos="fade-up">
+      <div class="container" style="text-align:center">
+        <h2>Education</h2>
+        <p><strong>Thapar Institute of Engineering and Technology</strong><br>Bachelor of Technology in Computer Engineering<br>2024 - 2028</p>
+      </div>
+    </section>
+
+    <section id="languages" data-aos="fade-up">
+      <div class="container" style="text-align:center">
+        <h2>Languages</h2>
+        <p>English | Hindi | Punjabi</p>
+      </div>
+    </section>
+
+    <section id="projects" data-aos="fade-up">
+      <div class="container">
+        <h2 style="color: #7b2cbf; text-align:center;">Projects</h2>
+        <div class="project-card">
+          <!-- img src="project1.jpg" alt="Project 1">--> 
+          <div class="content">
+            <h3>Portfolio Website</h3>
+            <p>A responsive personal portfolio showcasing my skills, projects, and contact details using HTML, CSS, and JavaScript.</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <!--<img src="project2.jpg" alt="Project 2">-->
+          <div class="content">
+            <h3>Calculator</h3>
+            <p>A Simple Numeric Calculator using HTML,CSS and JavaScript.</p>
+           <a href="/Calculator.html" target="_blank">Calculator</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" data-aos="fade-up">
+      <div class="container" style="text-align:center">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:hitensingla2006@gmail.com">hitensingla2006@gmail.com</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Hiten Singla. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+    const typed = new Typed('.typed-text', {
+      strings: ['Hi, My name is Hiten Singla', 'I am a Web Developer'],
+      typeSpeed: 50,
+      backSpeed: 35,
+      loop: true
+    });
+  </script>
+</body>
+</html>
